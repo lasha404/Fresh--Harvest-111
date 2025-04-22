@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ka">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="პრასი - Fresh Harvest - ფერმიდან მაგიდამდე სიახლე">
+    <meta name="keywords" content="პრასი, ორგანული პროდუქტები, ფერმის პროდუქტები">
+    <title>პრასი - Fresh Harvest</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./product.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../fresh.svg" alt="Fresh Harvest Logo">
+                        <h1>FRESH HARVEST</h1>
+                    </a>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+                <nav id="main-nav">
+                    <ul class="navbar">
+                        <li><a href="../index.html">მთავარი</a></li>
+                        <li class="dropdown active">
+                            <a href="#">პროდუქტები</a>
+                            <div class="dropdown-menu">
+                                <a href="./lettuce.html">სალათის ფურცლები</a>
+                                <a href="./arugula.html">რუკოლა</a>
+                                <a href="./microgreens.html">მიკრომწვანილები</a>
+                                <a href="./red_kale.html">წითელი ფხალი</a>
+                                <a href="./leek.html" class="active">პრასი</a>
+                            </div>
+                        </li>
+                        <li><a href="../index.html#about">ჩვენს შესახებ</a></li>
+                        <li><a href="../index.html#contact">კონტაქტი</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Detail Section -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">მთავარი</a> &gt;
+                <a href="../index.html#products">პროდუქტები</a> &gt;
+                <span>პრასი</span>
+            </div>
+
+            <div class="product-content">
+                <div class="product-gallery">
+                    <img src="https://veggiedesserts.com/wp-content/uploads/2021/09/Depositphotos_314117214_l-2015-leek-vegetable-sq.jpg"
+                        alt="პრასი" class="main-image">
+                </div>
+
+                <div class="product-info">
+                    <h1>პრასი</h1>
+                    <div class="product-price">
+                        <span class="price">5€ / kg</span>
+                        <span class="availability in-stock">მარაგშია</span>
+                    </div>
+
+                    <div class="product-description">
+                        <h2>პროდუქტის შესახებ</h2>
+                        <p>ჩვენი პრასი მოყვანილია ბუნებრივ გარემოში, ორგანული მეთოდებით, მაღალი ხარისხის ნერგებიდან.
+                            დამუშავებულია ხელით და არ შეიცავს ქიმიურ დანამატებს. მისი რბილი არომატი და მრავალმხრივი
+                            გამოყენების შესაძლებლობები მას დაუვიწყარ ინგრედიენტად აქცევს.</p>
+
+                        <h3>სასარგებლო თვისებები:</h3>
+                        <ul>
+                            <li>მდიდარია ვიტამინებით A, C და B6</li>
+                            <li>კარგი წყაროა რკინისა და მაგნიუმის</li>
+                            <li>ხელს უწყობს საჭმლის მონელებას</li>
+                            <li>თავსებადია დიეტურ კვებასთან</li>
+                            <li>შემცველია ანტიბაქტერიული ნივთიერებები</li>
+                        </ul>
+
+                        <h3>გამოყენება:</h3>
+                        <p>შესანიშნავია წვნიანებში, მოთუშულ კერძებში, ომლეტებში ან უბრალოდ ხარშულ მდგომარეობაში.
+                            პრასის მსუბუქი და სურნელოვანი გემო განუმეორებელ არომატს აძლევს ნებისმიერ კერძს.</p>
+                    </div>
+
+                    <div class="product-options">
+                        <div class="quantity-selector">
+                            <label for="quantity">რაოდენობა (კგ):</label>
+                            <div class="quantity-controls">
+                                <button class="quantity-btn minus" aria-label="შეამცირე რაოდენობა">-</button>
+                                <input type="number" id="quantity" value="1" min="0.5" max="10" step="0.5">
+                                <button class="quantity-btn plus" aria-label="გაზარდე რაოდენობა">+</button>
+                            </div>
+                        </div>
+
+                        <button class="add-to-cart-btn">კალათაში დამატება</button>
+                    </div>
+
+                    <div class="delivery-info">
+                        <div class="delivery-option">
+                            <img src="../icons/delivery.svg" alt="მიტანის სერვისი" class="info-icon">
+                            <p>მიტანა 24 საათში</p>
+                        </div>
+                        <div class="delivery-option">
+                            <img src="../icons/quality.svg" alt="ხარისხის გარანტია" class="info-icon">
+                            <p>ხარისხის გარანტია</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-products">
+                <h2>მსგავსი პროდუქტები</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.yates.com.au/media/plants/herbs/pr-tn-herb-microgreens.jpg"
+                                alt="მიკრომწვანილები">
+                        </div>
+                        <div class="product-info">
+                            <h3>მიკრომწვანილები</h3>
+                            <p>6€ / kg</p>
+                            <a href="./microgreens.html" class="view-product-btn">ნახვა</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://t3.ftcdn.net/jpg/00/75/17/96/360_F_75179688_DPiLp6jyhqTKtpPPZCnVKfjEUBQGtAGw.jpg"
+                                alt="სალათის ფურცლები">
+                        </div>
+                        <div class="product-info">
+                            <h3>სალათის ფურცლები</h3>
+                            <p>6€ / kg</p>
+                            <a href="./lettuce.html" class="view-product-btn">ნახვა</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://www.123seeds.com/media/catalog/product/cache/2/image/350x/9df78eab33525d08d6e5fb8d27136e95/r/u/rucola_500_.jpg"
+                                alt="რუკოლა">
+                        </div>
+                        <div class="product-info">
+                            <h3>რუკოლა</h3>
+                            <p>6€ / kg</p>
+                            <a href="./arugula.html" class="view-product-btn">ნახვა</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://img.livestrong.com/-/photos.demandstudios.com/getty/article/144/110/531659773.jpg"
+                                alt="წითელი ფხალი">
+                        </div>
+                        <div class="product-info">
+                            <h3>წითელი ფხალი</h3>
+                            <p>7€ / kg</p>
+                            <a href="./red_kale.html" class="view-product-btn">ნახვა</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../fresh.svg" alt="Fresh Harvest Logo">
+                    <h3>FRESH HARVEST</h3>
+                </div>
+                <div class="contact-info">
+                    <p>მისამართი 123</p>
+                    <p>Phone: 853-123-4557</p>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification">
+        <p>პროდუქტი წარმატებით დაემატა კალათაში</p>
+    </div>
+
+    <script src="../main.js"></script>
+    <script src="./product.js"></script>
+</body>
+
+</html>
