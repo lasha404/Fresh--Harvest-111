@@ -503,6 +503,7 @@ footer {
 
     .dropdown.active .dropdown-menu {
         display: block !important;
+        z-index: 1000; /* update
     }
 
     .mobile-menu-btn {
