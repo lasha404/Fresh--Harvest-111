@@ -273,7 +273,7 @@ footer {
 
 /* Mobile Menu Styles */
 .mobile-menu-btn {
-    display: none;
+    display: none; /* ეს უნდა შეიცვალოს */
     background: none;
     border: none;
     font-size: 24px;
@@ -497,7 +497,6 @@ footer {
         position: static;
         box-shadow: none;
         background: #f8f8f8;
-        /* display: none !important; - ეს ხაზი წაიშალა */
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.3s, visibility 0.3s;
@@ -511,6 +510,6 @@ footer {
     }
 
     .mobile-menu-btn {
-        display: block;
+        display: block; /* ეს ხაზი დაემატა */
     }
 }
