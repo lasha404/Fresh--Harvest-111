@@ -44,6 +44,7 @@ dropdowns.forEach(dropdown => {
         if (window.innerWidth < 768) {
             event.preventDefault(); // თავიდან ავიცილოთ ნავიგაცია
             dropdown.classList.toggle('active');
+            event.stopPropagation(); //
         }
     });
 });
