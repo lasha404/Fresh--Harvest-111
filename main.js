@@ -1,14 +1,20 @@
 // მობილური მენიუს გადართვა
 const mobileMenuButton = document.querySelector('.mobile-menu-btn');
 const mainNav = document.getElementById('main-nav');
+const dropdowns = document.querySelectorAll('.dropdown'); // დარწმუნდით, რომ ეს ცვლადი აქაც არის ხელმისაწვდომი
 
 mobileMenuButton.addEventListener('click', () => {
     mainNav.classList.toggle('active');
+
+    // თუ მენიუ იხურება, დახურეთ ყველა ღია დროპდაუნი
+    if (!mainNav.classList.contains('active')) {
+        dropdowns.forEach(dropdown => {
+            dropdown.classList.remove('active');
+        });
+    }
 });
 
 // dropdown menu
-const dropdowns = document.querySelectorAll('.dropdown');
-
 dropdowns.forEach(dropdown => {
     const dropdownToggle = dropdown.querySelector('a');
 
@@ -29,26 +35,33 @@ dropdowns.forEach(dropdown => {
     });
 });
 
-
 // პროდუქტების სექცია
 document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.product-card');
-    
+
     productCards.forEach(card => {
         // Get the href value from the child element
         const href = card.querySelector('[href]').getAttribute('href');
-        
+
         // Make the entire card clickable
-        card.addEventListener('click', function() {
+        
+
+     card.addEventListener('click', function() {
+            if (window.innerWidth < 768) {
+                // დახურეთ ყველა ღია დროპდაუნი პროდუქტის გვერდზე გადასვლამდე
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+                // დახურეთ მობილური მენიუც
+                mainNav.classList.remove('active');
+            }
             window.location.href = href;
         });
-        
+
         // Add pointer cursor on hover
         card.style.cursor = 'pointer';
     });
 });
-
-
 
 // სლაიდერი
 
@@ -63,4 +76,3 @@ nextBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', () => {
   productSlider.scrollBy({ left: -300, behavior: 'smooth' });
 });
-
