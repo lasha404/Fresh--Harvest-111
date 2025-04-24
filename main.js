@@ -1,31 +1,3 @@
-// // Mobile menu toggle
-// document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
-//     document.getElementById('main-nav').classList.toggle('active');
-// });
-
-// // Dropdown functionality for mobile
-// document.querySelectorAll('.dropdown').forEach(dropdown => {
-//     const toggle = dropdown.querySelector('a');
-//     const menu = dropdown.querySelector('.dropdown-menu');
-
-//     toggle.addEventListener('click', (e) => {
-//         if (window.innerWidth < 768) {
-//             e.preventDefault();
-//             dropdown.classList.toggle('active'); 
-//         }
-//     });
-// });
-
-// // Close menu on link click (mobile)
-// document.querySelectorAll('#main-nav a').forEach(link => {
-//     link.addEventListener('click', () => {
-//         if (window.innerWidth < 768) {
-//             document.getElementById('main-nav').classList.remove('active');
-//         }
-//     });
-// });
-
-
 // მობილური მენიუს გადართვა
 const mobileMenuButton = document.querySelector('.mobile-menu-btn');
 const mainNav = document.getElementById('main-nav');
@@ -34,7 +6,7 @@ mobileMenuButton.addEventListener('click', () => {
     mainNav.classList.toggle('active');
 });
 
-// ჩამოსაშლელი მენიუს ფუნქციონირება მობილურზე
+// dropdown menu
 const dropdowns = document.querySelectorAll('.dropdown');
 
 dropdowns.forEach(dropdown => {
@@ -42,19 +14,21 @@ dropdowns.forEach(dropdown => {
 
     dropdownToggle.addEventListener('click', (event) => {
         if (window.innerWidth < 768) {
-            event.preventDefault(); // თავიდან ავიცილოთ ნავიგაცია
+            event.preventDefault();
+
+            // დახურეთ ყველა სხვა ღია დროპდაუნი
+            dropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+
+            // გახსენით/დახურეთ მიმდინარე დროპდაუნი
             dropdown.classList.toggle('active');
-            event.stopPropagation(); //
         }
     });
 });
 
-// მენიუს დახურვა ლინკზე დაჭერისას (მობილური)
-mainNav.addEventListener('click', (event) => {
-    if (window.innerWidth < 768 && event.target.tagName === 'A') {
-        mainNav.classList.remove('active');
-    }
-});
 
 // პროდუქტების სექცია
 document.addEventListener('DOMContentLoaded', function() {
